@@ -1,0 +1,14 @@
+version: '3'
+services:
+  firstservice:
+    image: newimage0:new_version
+    ports:
+     - 3000:3000
+    working_dir: /app 
+    restart: always
+    healthcheck:
+      test: curl --fail http://localhost || exit 1
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      

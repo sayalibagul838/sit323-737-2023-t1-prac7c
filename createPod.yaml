@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: saya0
+  labels:
+    run: mypod
+spec:
+  containers:
+  - image: sayali063/newimage0:new_version
+    name: week4
+    ports:
+    - containerPort: 3000
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+  
